@@ -1,8 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+##makeCacheMatrix will create the special object that can be used by cacheSolve
+##cacheSolve will verify if the inverse is already cached and return it
+##if it is not cached, it will calculate it and cache it for next calls
+##
+## 
 
-## Write a short comment describing this function
-
+##create the special object that has 4 functions
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y){
@@ -16,8 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## calculate and cache the inverse if it is not already cached
+##return the cahced if it is present
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   inv <- x$getinv()
